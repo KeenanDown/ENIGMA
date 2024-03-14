@@ -210,7 +210,7 @@ def parcel_to_surface(source_val, target_lab, mask=None, fill=0, source_lab=None
     if isinstance(target_lab, str):
         fname = target_lab + '.csv'
         parc_pth = os.path.dirname(os.path.dirname(__file__)) + '/datasets/parcellations/' + fname
-        target_lab = np.loadtxt(parc_pth, dtype=np.int)
+        target_lab = np.loadtxt(parc_pth, dtype=int)
 
     if source_val.size == 68 and np.unique(target_lab).size == 71:
         a_idx = list(range(1, 4)) + list(range(5, 39)) + list(range(40, 71))
