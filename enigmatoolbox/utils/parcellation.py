@@ -162,7 +162,7 @@ def map_to_mask(values, mask, fill=0, axis=0):
         (n_mask, n_cols) otherwise.
 
     """
-    if np.issubdtype(values.dtype, np.integer) and not np.isfinite(fill):
+    if np.issubdtype(values.dtype, int) and not np.isfinite(fill):
         raise ValueError("Cannot use non-finite 'fill' with integer arrays.")
 
     if values.ndim == 1:
@@ -304,7 +304,7 @@ def surface_to_parcel(values, labels, weights=None, target_labels=None,
     if isinstance(labels, str):
         fname = labels + '.csv'
         parc_pth = os.path.dirname(os.path.dirname(__file__)) + '/datasets/parcellations/' + fname
-        labels = np.loadtxt(parc_pth, dtype=np.int)
+        labels = np.loadtxt(parc_pth, dtype=int)
 
     if axis == 1 and values.ndim == 1:
         axis = 0
