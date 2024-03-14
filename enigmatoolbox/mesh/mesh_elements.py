@@ -620,7 +620,7 @@ def get_boundary_cells(surf, with_edge=True):
 
 
 def get_immediate_distance(surf, metric='euclidean', mask=None,
-                           dtype=np.float):
+                           dtype=float):
     """Get immediate distance matrix.
 
     Parameters
