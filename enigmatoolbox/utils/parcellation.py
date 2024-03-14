@@ -267,7 +267,7 @@ def _get_redop(red_op, weights=None, axis=None):
 
 
 def surface_to_parcel(values, labels, weights=None, target_labels=None,
-                     red_op='mean', axis=0, dtype=np.float):
+                     red_op='mean', axis=0, dtype=float):
     """Summarize data in `values` according to `labels` (author: @OualidBenkarim)
 
     Parameters
